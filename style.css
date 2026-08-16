@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-color: #f4f6f3;
+    --card-bg: #ffffff;
+    --primary-olive: #556b2f;
+    --primary-hover: #3b4b20;
+    --light-olive: #e8ede0;
+    --text-color: #2c3521;
+    --border-color: #d2d8c8;
+    --income-color: #2e7d32;
+    --expense-color: #c62828;
+    --delete-btn: #a94442;
+    --delete-hover: #843534;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-olive);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: var(--primary-olive);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+form#budget-form {
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafbf9;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-olive);
+    box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.2);
+    background-color: #fff;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-olive);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-right: 8px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #424242;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="reset"]:hover {
+    background-color: #d5d5d5;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 25px 0;
+}
+
+div:has(#revenue) {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-olive);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+div:has(#revenue) p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+#revenue {
+    color: var(--income-color);
+    font-weight: 600;
+}
+
+#expense {
+    color: var(--expense-color);
+    font-weight: 600;
+}
+
+#total {
+    color: var(--primary-olive);
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+ul#transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#transaction-list li {
+    background-color: var(--card-bg);
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    transition: transform 0.1s;
+}
+
+ul#transaction-list li:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-olive);
+}
+
+ul#transaction-list button {
+    background-color: var(--delete-btn);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+ul#transaction-list button:hover {
+    background-color: var(--delete-hover);
+}
